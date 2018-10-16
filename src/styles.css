@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+
+.content {
+    padding: 20px;
+}
+
+.table-responsive table {
+    width: 100%;
+}
+table {
+    overflow-x: hidden;
+    font-size: 12px;
+}
+
+table thead tr {
+    height: 21px;
+    cursor: pointer;
+}
+
+body.day table thead tr {
+    background-color: #caebf2;
+}
+
+body.night table thead tr {
+    background-color: #858585;
+}
+
+table thead tr th {
+    border-left: 1px solid white;
+    padding-left: 5px;
+}
+
+body.day table tbody tr:nth-child(even) {
+    background: #f3f7f7;
+}
+
+body.day table tbody tr:nth-child(odd) {
+    background: #fff
+}
+
+body.night table tbody tr:nth-child(even) {
+    background: #a9a9a9;
+}
+
+body.night table tbody tr:nth-child(odd) {
+    background: #a9a9a9
+}
+
+body.day table tbody tr {
+    height: 22px;
+    border-bottom: 1px solid #e1eeef;
+}
+
+body.night table tbody tr {
+    height: 22px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+
+.primary-button {
+    border: 1px solid #a26a00;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #f2b644;
+    display: inline-block;
+    background-color: #e39706;
+    background-image: -webkit-linear-gradient(#e39706, #b17400);
+    background-image: linear-gradient(#e39706, #b17400);
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fda600;
+    background-clip: padding-box;
+    color: #342201;
+    padding: 4px 13px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.primary-button:hover:not(:disabled) {
+    box-shadow: inset 0 1px 0 0 #f0a413;
+    cursor: pointer;
+    background-color: #c68509;
+    background-image: -webkit-linear-gradient(#c68509, #a26a00);
+    background-image: linear-gradient(#c68509, #a26a00);
+}
+
+.primary-button:active:not(:disabled) {
+    border: 1px solid #6f4900;
+    background-color: #bc7f09;
+    background-image: -webkit-linear-gradient(#bc7f09, #9f6903 15%);
+    background-image: linear-gradient(#bc7f09, #9f6903 15%);
+    box-shadow: inset 0 1px 0 0 #bc7f09;
+}
+
+a.standard {
+    color: #3a4449;
+    text-decoration: underline;
+    -webkit-transition: color, 0.3s;
+    -moz-transition: color, 0.3s;
+    transition: color, 0.3s;
+}
+
+a.standard:hover {
+    color: #e39706;
+    text-decoration: underline;
+    -webkit-transition: color, 0s;
+    -moz-transition: color, 0s;
+    transition: color, 0s;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}

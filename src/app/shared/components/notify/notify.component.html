@@ -1,0 +1,8 @@
+<div class="page-notify" [ngClass]="{'warning': className == 'warning', 'error': className == 'error', 'info': className == 'info'}">
+    <div class="float-left">
+        <i class="fa fa-exclamation-circle" aria-hidden="true" *ngIf="className == 'error'"></i>
+        <i class="fa fa-exclamation-triangle" aria-hidden="true" *ngIf="className == 'warning'"></i>
+        <i class="fa fa-question-circle" aria-hidden="true" *ngIf="className == 'info'"></i>
+    </div>
+    <ng-content></ng-content>
+</div>

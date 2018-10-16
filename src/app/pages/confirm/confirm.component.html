@@ -1,0 +1,40 @@
+<div class="row p-t-30">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h1 class="text-inverse text-uppercase font-light">Create Your Account</h1>
+            <div class="signupSteps">
+                <h2>
+                    <span class="fa-stack fa-lg"><i class="fa fa-check-circle step"></i></span> Register <i class="fa fa-long-arrow-right"></i>
+                    <span class="fa-stack fa-lg"><i class="fa fa-check-circle step"></i></span> Activate Your account <i class="fa fa-long-arrow-right"></i>
+                    <span class="fa-stack fa-lg"><i class="fa fa-circle step"></i></span> Complete Your Profile
+                </h2>
+            </div>
+        </div>
+
+        <div class="bg-primary text-center p-t-48 p-b-48 m-t-30">
+            <div class="sign-in-form">
+                <div class="column1">
+                    <h3 class="column-title">Sign In</h3>
+
+                    <form>
+                        <fieldset class="aboveCaptcha">
+                            <div><label for="username">Email:</label><input class="userPassInput" type="text" name="username" id="username" [(ngModel)]="signinForm.email"></div>
+                            <div><label for="password">Password:</label><input class="userPassInput" type="password" name="password" id="password" [(ngModel)]="signinForm.password"></div>
+                        </fieldset>
+
+                        <re-captcha site_key="6LdPjjoUAAAAADOGFhnrLXE1wvQc7ALjqJn03MLw" (captchaResponse)="handleCorrectCaptcha($event)"></re-captcha>
+
+                        <button class="primary-button" style="width:100%;" type="submit" name="login" (click)="onSignin()">Sign in</button>
+                    </form>
+
+                    <a [routerLink]="['/resetPassword']" class="standard">Forgot your password?</a>
+
+                </div>
+                <div class="column2">
+                    <h3 class="column-title">Thank you for validating your email address.</h3>
+                    <h5 class="m-t-20">Please sign in to complete your profile</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.featureBanner {
+  border-bottom: 3px solid #ffab06;
+  margin-top: 45px;
+
+  padding: 48px 0 48px 0;
+  background-color: #caebf2;
+  min-height: 200px;
+
+  h2.headline {
+    line-height: 45px;
+    font-size: 36px;
+    font-weight: 300;
+    color: #5c7882;
+    margin: 16px 0 40px;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    cololr: #1e2324;
+    > a {
+      color: #3a4449;
+      text-decoration: underline;
+      transition: color, 0.3s;
+    }
+  }
+
+
+}
+
+
+.home-col {
+  padding: 33px 15px 20px 15px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+
+  .column {
+    max-width: 390px;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 300;
+
+    h4 {
+      font-weight: 300;
+      font-size: 24px;
+      &.column-title {
+        color: #0b7076;
+      }
+    }
+  }
+}

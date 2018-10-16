@@ -1,0 +1,30 @@
+<div class="row p-t-30">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h1 class="text-inverse text-uppercase font-light">{{'HOME.TITLE' | translate}}</h1>
+            <h4>{{'HOME.SUBTITLE' | translate}}</h4>
+        </div>
+
+        <div class="featureBanner text-center">
+            <h2 class="headline">{{'HOME.MAIN_SENTENCE_FIRST' | translate}}<br>{{'HOME.MAIN_SENTENCE_SECOND' | translate}}</h2>
+
+            <button class="primary-button" (click)="onClickSignup()">{{'BUTTON.CREATE_ACCOUNT' | translate}}</button>
+            <p>{{'LABEL.ALREADY_MEMBER' | translate}} <a [routerLink]="['/login']" class="standard">Sign in</a>.</p>
+        </div>
+
+        <div class="home-col">
+            <div class="column">
+                <h4 class="column-title">{{'HOME.FOOTER1_TITLE' | translate}}</h4>
+                <p>{{'HOME.FOOTER1_SUBTITLE' | translate}}</p>
+            </div>
+            <div class="column">
+                <h4 class="column-title">{{'HOME.FOOTER2_TITLE' | translate}}</h4>
+                <p>{{'HOME.FOOTER2_SUBTITLE' | translate}}</p>
+            </div>
+            <div class="column last">
+                <h4 class="column-title">{{'HOME.FOOTER3_TITLE' | translate}}</h4>
+                <p>{{'HOME.FOOTER3_SUBTITLE' | translate}}</p>
+            </div>
+        </div>
+    </div>
+</div>

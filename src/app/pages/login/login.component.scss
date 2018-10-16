@@ -1,0 +1,54 @@
+.sign-in-form {
+  width: 710px;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+
+  > div {
+    display: table-cell;
+  }
+
+  .column-title {
+    font-size: 24px;
+    margin: 0px;
+    font-weight: bold;
+    color: #3a4449;
+  }
+
+  .column1 {
+    text-align: left;
+    width: 318px;
+    padding: 0 40px 0 0;
+    border-right: 1px solid #cacaca;
+
+    form {
+      margin-top: 30px;
+      display: table;
+
+      .aboveCaptcha {
+        margin-bottom: 6px;
+        > div {
+          display: table-row;
+        }
+
+      }
+      label {
+        display: table-cell;
+        padding-bottom: 10px;
+        white-space: nowrap;
+        padding-right: 5px;
+      }
+
+      input {
+        display: table-cell;
+        width: 190px;
+      }
+    }
+  }
+
+  .column2 {
+    text-align: left;
+    width: 340px;
+    padding-left: 40px;
+  }
+}

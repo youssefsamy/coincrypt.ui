@@ -1,0 +1,66 @@
+<div class="row p-t-30">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h1 class="text-inverse text-uppercase font-light">{{'PROFILE.TITLE' | translate}}</h1>
+            <h3>{{'PROFILE.SUBTITLE' | translate}}</h3>
+        </div>
+
+        <div class="text-center p-t-20 m-t-30">
+            <div id="profile-head" class="pad">
+                <section class="text-left section-status">
+                    <h2 class="text-inverse">
+                        Verification status:
+                        <div class="profile-status" [ngClass]="{'warning': profile.verify_status == 0, 'pending': profile.verify_status == 1}">
+                            <span class="message">{{profile.verify_status == 0 ? 'Unverified' : 'Pending'}}</span></div>
+                    </h2>
+                    <h5>Withdrawal limit: <strong>$0</strong> USD equivalent per day</h5>
+                    <h5>Verify your profile to increase your limit to <strong>$25,000</strong>.</h5>
+                </section>
+
+                <section class="section-entity">
+                    <div class="entity">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <div>
+                            <div class="displayName">{{settings.getUserSetting('email')}}</div>
+                            <div>{{settings.getUserSetting('profile').country}}</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="bg-primary profile-form">
+                <h3>Profile Verification</h3>
+
+                <form>
+                    <div>
+                        <label>First Name:</label>
+                        <input type="text" name="firstName" [(ngModel)]="profile.firstname">
+                    </div>
+                    <div>
+                        <label>Last Name:</label>
+                        <input type="text" name="lastName" [(ngModel)]="profile.lastname">
+                    </div>
+                    <div>
+                        <label>Street Address:</label>
+                        <input type="text" name="address" [(ngModel)]="profile.address">
+                    </div>
+                    <div>
+                        <label>City:</label>
+                        <input type="text" name="city" [(ngModel)]="profile.city">
+                    </div>
+                    <div>
+                        <label>Postal Code:</label>
+                        <input type="text" name="postalCode" [(ngModel)]="profile.postalcode">
+                    </div>
+                    <div>
+                        <label>Phone Number:</label>
+                        <input type="tel" name="phone" id="phone" [(ngModel)]="phonenumber">
+                    </div>
+                    <div class="m-t-30">
+                        <button class="primary-button" (click)="onBeginVerify()">Begin Verification</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

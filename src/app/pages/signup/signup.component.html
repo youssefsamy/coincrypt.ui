@@ -1,0 +1,60 @@
+<div class="row p-t-30">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h1 class="text-inverse text-uppercase font-light">{{'SIGNUP.TITLE' | translate}}</h1>
+            <div class="signupSteps">
+                <h2>
+                    <span class="fa-stack fa-lg"><i class="fa step" [ngClass]="{'fa-check-circle': registered, 'fa-circle': !registered}"></i></span> Register <i class="fa fa-long-arrow-right"></i>
+                    <span class="fa-stack fa-lg"><i class="fa step" [ngClass]="{'fa-circle-thin': !registered, 'fa-circle': registered}"></i></span> Activate Your account <i class="fa fa-long-arrow-right"></i>
+                    <span class="fa-stack fa-lg"><i class="fa fa-circle-thin step"></i></span> Complete Your Profile
+                </h2>
+            </div>
+        </div>
+
+        <div class="bg-primary text-center p-t-48 p-b-48 m-t-30" *ngIf="!registered">
+            <div class="signup-form">
+                <div class="m-b-30">
+                    <page-notify [className]="'warning'">
+                        <div>
+                            {{'SIGNUP.WARNING_MESSAGE' | translate}}
+                        </div>
+                    </page-notify>
+                    <p>{{'SIGNUP.SIGNUP_NOTICE' | translate}}</p>
+                </div>
+                <div class="signup-column">
+                    <form>
+                        <fieldset class="aboveCaptcha m-b-10">
+                            <div>
+                                <label for="country">Country:</label>
+                                <select name="country" id="country" [(ngModel)]="signupForm.country">
+                                    <option value="">Select Country...</option>
+                                    <option *ngFor="let country of country_list;" value="{{country}}">{{country}}</option>
+                                </select>
+                            </div>
+                            <div><label for="email">Email:</label><input class="userPassInput" type="text" name="username" value="" id="email" [(ngModel)]="signupForm.email"></div>
+                            <div><label for="password">Password:</label><input class="userPassInput" type="password" name="password" value="" id="password" [(ngModel)]="signupForm.password"></div>
+                            <div><label for="password2">Repeat Password:</label><input class="userPassInput" type="password" name="password2" value="" id="password2" [(ngModel)]="signupForm.retype_password"></div>
+                        </fieldset>
+
+                        <re-captcha site_key="6LdPjjoUAAAAADOGFhnrLXE1wvQc7ALjqJn03MLw" (captchaResponse)="handleCorrectCaptcha($event)"></re-captcha>
+
+                        <p class="m-t-20"><input type="checkbox" name="terms"  [(ngModel)]="signupForm.agree"> I agree to the <a target="_blank" href="/terms" class="standard">Terms of Use</a>.</p>
+
+                        <button class="primary-button" type="button" style="width:100%;" (click)="onSignup()">{{'BUTTON.SIGN_UP' | translate}}</button>
+                    </form>
+                </div>
+                <div class="signup-column-notify">
+                    <p>{{'SIGNUP.RIGHT_SIDE1' | translate}}</p>
+                    <p>{{'SIGNUP.RIGHT_SIDE2' | translate}}</p>
+                    <p>{{'SIGNUP.RIGHT_SIDE3' | translate}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-primary text-center p-t-48 p-b-48 m-t-30" *ngIf="registered">
+            <h4>{{'SIGNUP.THANK_YOU_FOR_CREATE1' | translate}}</h4>
+            <h2 class="text-dark font-weight-bold">{{'SIGNUP.THANK_YOU_FOR_CREATE2' | translate}}</h2>
+            <p>{{'SIGNUP.THANK_YOU_FOR_CREATE3' | translate}}</p>
+        </div>
+    </div>
+</div>

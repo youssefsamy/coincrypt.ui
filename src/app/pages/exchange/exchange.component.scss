@@ -1,0 +1,652 @@
+.height-11 {
+    height: 11px;
+    width: auto;
+}
+
+.day {
+    .market-table {
+        border: 1px solid #caebf2;
+
+        .market-tab {
+            background-color: #ffffff;
+
+            .tabs {
+                li {
+                    color: black;
+                    &.active {
+                        color: white;
+                    }
+                }
+            }
+            .toolPanel {
+                background-color: #fff;
+
+                .notch {
+                    background: url(../../../assets/images/notch_up.png);
+                }
+            }
+        }
+
+        .table-content {
+            table tbody {
+                tr {
+                    &:hover {
+                        background-color: #b9dae1;
+                        border: 1px solid #a5bfc6;
+
+                        td:first-child {
+                            background-color: #a5bfc6;
+                        }
+                    }
+
+                    &.active {
+                        background-color: #ff8c85;
+                        border-top: 1px double #b42d2d;
+                        border-bottom: 1px solid #b42d2d;
+
+                        td:first-child {
+                            background-color: #b42d2d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .make-orders {
+        border: 1px solid #caebf2;
+        .sub-title {
+            background-color: #c2e5ec;
+        }
+    }
+}
+
+.night {
+    .market-table {
+        border: 1px solid #5f5f5f;
+
+        .market-tab {
+            background-color: #e7e7e7;
+
+            .tabs {
+                li {
+                    color: black;
+                    &.active {
+                        color: white;
+                    }
+                }
+            }
+            .toolPanel {
+                background-color: #b0b0b0;
+
+                .notch {
+                    background: url(../../../assets/images/notch_up_night.png);
+                }
+            }
+        }
+
+        .table-content {
+            table tbody {
+                tr {
+                    &:hover {
+                        background-color: #828282;
+                        border: 1px solid #b0b0b0;
+
+                        td:first-child {
+                            background-color: #636363;
+                        }
+                    }
+                    &.active {
+                        background-color: #ff8c85;
+                        border-top: 1px double #b42d2d;
+                        border-bottom: 1px solid #b42d2d;
+
+                        td:first-child {
+                            background-color: #b42d2d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .make-orders {
+        border: 1px solid #5f5f5f;
+        .sub-title {
+            background-color: #c9c9c9;
+        }
+    }
+}
+
+.star-off {
+    color: #d6e6e6;
+}
+
+.top-side {
+    float: left;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+
+    .chart-side {
+        flex: 1;
+        margin-left: 20px;
+        .chart {
+            margin-top: 20px;
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    .market-table {
+        width: 370px;
+        float: left;
+        // max-height: 500px;
+    }
+}
+
+.market-table {
+    overflow: auto;
+    border-radius: 10px;
+
+    .market-header {
+        height: 40px;
+        padding: 0 10px 0 20px;
+        .title {
+            line-height: 40px;
+            font-weight: 400;
+            font-size: 21px;
+        }
+
+        input[type='checkbox'] {
+            vertical-align: middle;
+        }
+
+        .search-field {
+            position: relative;
+            margin-top: 8px;
+            margin-left: 10px;
+
+            i {
+                position: absolute;
+                left: 5px;
+                line-height: 25px;
+                color: black;
+            }
+            input {
+                width: 100px;
+                height: 25px;
+
+                padding-left: 20px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+            }
+        }
+        label {
+            line-height: 40px;
+        }
+    }
+
+    .market-tab {
+        padding-top: 10px;
+        border-bottom: 3px solid #ff3b3f;
+        position: relative;
+
+        .tabs {
+            font-weight: 600;
+            text-transform: uppercase;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+
+            li {
+                margin-left: 4px;
+                padding: 4px 8px;
+                margin-bottom: 0;
+                background-color: #a9a9a9;
+                cursor: pointer;
+
+                &.active {
+                    background-color: #ff3b3f;
+                }
+            }
+        }
+
+        .tools {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: #9ea8ac;
+        }
+
+        .toolPanel {
+            position: absolute;
+            z-index: 20;
+            top: 26px;
+            right: 0;
+            border: 1px solid #91abac;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background-clip: padding-box;
+            font-size: 12px;
+            line-height: 16px;
+            width: 290px;
+            -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+            .notch {
+                position: absolute;
+                width: 12px;
+                height: 7px;
+                top: -7px;
+                right: 9px;
+            }
+
+            .title {
+                float: left;
+                margin: 10px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .settingsRow {
+                float: left;
+                clear: left;
+                width: 95%;
+                height: 20px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+
+                .desc {
+                    float: right;
+                    font-size: 11px;
+                    margin-right: 8px;
+                }
+                .button-group {
+                    float: right;
+                    width: 172px;
+                    height: 18px;
+
+                    line-height: 16px;
+                    font-size: 0;
+
+                    padding: 0;
+                    zoom: 1;
+                    margin: 0;
+
+                    li {
+                        display: inline-block;
+
+                        &:first-child {
+                            border-radius: 5px 0 0 5px;
+                            border-left-width: 1px;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 5px 5px 0;
+                            border-right-width: 1px;
+                        }
+
+                        text-align: center;
+
+                        &.showName {
+                            width: 28%;
+                        }
+                        &.showBalance {
+                            width: 32%;
+                        }
+                        &.showValue {
+                            width: 40%;
+                        }
+                        &.starAll {
+                            width: 24%;
+                        }
+                        &.starNone {
+                            width: 32%;
+                        }
+                        &.starMine {
+                            width: 44%;
+                        }
+
+                        &.active {
+                            background-color: #e9ad3c;
+                            background-image: -webkit-linear-gradient(#ffffff, #ff3b3f);
+                            background-image: linear-gradient(#ffffff, #ff3b3f);
+                        }
+                    }
+
+                    .button {
+                        height: 18px;
+                        line-height: 12px;
+                        font-size: 11px;
+
+                        background-image: -webkit-linear-gradient(#ffffff, #c4d5db);
+                        background-image: linear-gradient(#ffffff, #c4d5db);
+
+                        box-shadow: none;
+                        color: #3a4449;
+                        cursor: pointer;
+
+                        border-radius: 0;
+                        border: 1px solid #91abac;
+                        border-left-width: 0;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-content {
+        table {
+            overflow-x: hidden;
+            font-size: 11px;
+            thead {
+                tr {
+                    cursor: pointer;
+
+                    th:nth-child(1) {
+                        width: 20px;
+                        padding-left: 0px;
+                    }
+                    th:nth-child(2) {
+                        width: 45px;
+                    }
+                    th:nth-child(3) {
+                        width: 80px;
+                    }
+                    th:nth-child(4) {
+                        width: 60px;
+                    }
+                    th:nth-child(5) {
+                        width: 60px;
+                    }
+                    th:nth-child(6) {
+                        width: 103px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    cursor: pointer;
+
+                    td:not(:first-child) {
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sts-table {
+    width: 420px;
+    text-align: center;
+
+    padding-right: 20px;
+    .row > div:first-child {
+        border-left: 1px solid black;
+        border-top-left-radius: 10px;
+    }
+    .row > div:not(:last-child) {
+        padding: 5px 0;
+
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .row > div:nth-child(4) {
+        border-top-right-radius: 10px;
+    }
+    .row > div:last-child {
+        padding: 5px 0;
+        border: 1px solid black;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.orders {
+
+    .order-title {
+        height: 40px;
+        line-height: 40px;
+
+        h3 {
+            line-height: 40px;
+        }
+
+    }
+    table {
+        tbody {
+            tr {
+                cursor: pointer;
+
+                td {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+.make-orders {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    h3 {
+        padding-left: 20px;
+    }
+
+    .sub-title {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    form {
+
+        > div {
+            padding: 10px 0px;
+            position: relative;
+
+            label:first-child {
+                white-space: nowrap;
+                width: 23%;
+                margin-bottom: 0px;
+            }
+
+            input {
+                width: 60%;
+                height: 25px;
+
+                border-radius: 5px;
+                text-align: right;
+
+            }
+
+            .coin-name {
+                width: 12%;
+                text-align: right;
+                margin-bottom: 0px;
+            }
+        }
+
+        .bottom-dotted {
+            border-bottom: 1px dotted #b1b1b1;
+        }
+
+        .fee {
+            min-height: 45px;
+        }
+
+        .btn-wrapper {
+            text-align: right;
+
+            button {
+                border: 1px solid #c3d5dc;
+                border-radius: 3px;
+                box-shadow: inset 0 1px 0 0 white;
+                display: inline-block;
+                font-weight: bold;
+                background-color: #f1f4f5;
+                background-image: linear-gradient(#f1f4f5, #cddce1);
+                text-decoration: none;
+                text-shadow: 0 1px 0 #fdfdfe;
+                background-clip: padding-box;
+                color: #3a4449;
+                padding: 4px 13px;
+            }
+        }
+    }
+
+    .sub-title {
+        h3 {
+            line-height: 40px;
+            margin-bottom: 0;
+        }
+    }
+    &.buy-order .sub-title {
+        border-bottom: 2px solid green;
+    }
+
+    &.stop-order .sub-title {
+        border-bottom: 2px solid saddlebrown;
+    }
+
+    &.sell-order .sub-title {
+        border-bottom: 2px solid rebeccapurple;
+    }
+}
+
+.trade-info {
+    .header {
+        .name {
+            font-size: 22px;
+            float: left;
+            text-transform: uppercase;
+        }
+        .btn-group {
+            button {
+                font-size: 14px;
+                background-image: linear-gradient(#ffffff, #c4d5db);
+                box-shadow: none;
+                color: #3a4449;
+                border: 1px solid #91abac;
+                padding: 1px 6px;
+
+                &.active {
+                    box-shadow: none;
+                    background-image: linear-gradient(#e9ad3c, #fbeed6);
+                    background-color: #e9ad3c;
+                    color: #342201;
+                }
+            }
+        }
+    }
+
+    .trade-content {
+        table {
+            .sell {
+                color: #c02a1d;
+            }
+            .buy {
+                color: #27892f;
+            }
+        }
+    }
+}
+
+.table-responsive {
+    border: 1px solid #91abac;
+    overflow: hidden;
+
+    .table-head {
+        tbody {
+            tr {
+                height: 0;
+                border: none;
+                td {
+                    border: none;
+                    padding: 0px;
+                    div {
+                        height: 0;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-content {
+        height: 350px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track
+        {
+            background-color: #caebf2;
+        }
+
+        &::-webkit-scrollbar
+        {
+            width: 8px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            background-color: #6b8c8e;
+        }
+
+        thead {
+            tr {
+                height: 0;
+                border: none;
+                th {
+                    padding: 0px;
+                    border: none;
+                    div {
+                        height: 0;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            td {
+                padding-left: 5px;
+            }
+        }
+
+        .no-result {
+            padding: 5px 10px;
+            color: #91abac;
+        }
+    }
+}
+
+.my-open-orders {
+    .delete {
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+.market-depth {
+    #depth-chart {
+        height: 300px;
+    }
+}

@@ -1,0 +1,32 @@
+<div class="row p-t-30">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h1 class="text-inverse text-uppercase font-light">{{'SIGNIN.TITLE' | translate}}</h1>
+        </div>
+
+        <div class="bg-primary text-center p-t-48 p-b-48 m-t-30">
+            <div class="sign-in-form">
+                <div class="column1">
+                    <h3 class="column-title">{{'SIGNIN.SIGN_IN' | translate}}</h3>
+
+                    <form>
+                        <fieldset class="aboveCaptcha">
+                            <div><label for="username">Email:</label><input class="userPassInput" type="text" name="username" id="username" [(ngModel)]="signinForm.email"></div>
+                            <div><label for="password">Password:</label><input class="userPassInput" type="password" name="password" id="password" [(ngModel)]="signinForm.password"></div>
+                        </fieldset>
+
+                        <button class="primary-button" style="width:100%;" type="submit" name="login" (click)="onSignin()">{{'BUTTON.SIGN_IN' | translate}}</button>
+                    </form>
+
+                    <a [routerLink]="['/resetPassword']" class="standard">{{'LABEL.FORGOT_PASSWORD' | translate}}</a>
+
+                </div>
+                <div class="column2">
+                    <h3 class="column-title">{{'SIGNIN.DONT_HAVE_ACCOUNT' | translate}}</h3>
+                    <p>{{'SIGNIN.DONT_HAVE_ACCOUNT_DESCRIPTION' | translate}}</p>
+                    <button class="primary-button" style="width:100%;" type="submit" name="createAccount" (click)="onSignup()">{{'BUTTON.CREATE_ACCOUNT' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

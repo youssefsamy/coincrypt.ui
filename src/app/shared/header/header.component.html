@@ -1,0 +1,102 @@
+<div [ngClass]="{'day': settings.themeMode == 'day', 'night': settings.themeMode == 'night'}">
+    <div class="header">
+        <div class="logo">
+            <a [routerLink]="['/']">
+                <img src="assets/images/header/logo.png" alt="CoinCrypt Excange"/>
+            </a>
+        </div>
+        <div class="tabs left">
+            <ul>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/exchange']">Exchange</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/margin']">Margin</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/lending']">Lending</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/mining']">Mining</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/school']">School</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/incubator']">Incubator</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs right" *ngIf="settings.getAppSetting('is_loggedin')">
+            <ul>
+                <li class="nav-right hideAlert " routerLinkActive="active">
+                    <span class="title topLevel">Balances <i class="fa fa-caret-down dim"></i></span>
+                    <ul>
+                        <li><a [routerLink]="['/transfers']">Transfer Balances</a></li>
+                        <li><a [routerLink]="['/balances']">Deposits &amp; Withdrawals</a></li>
+                        <li><a [routerLink]="['/depositHistory']">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-right hideAlert" routerLinkActive="active">
+                    <span class="title topLevel">Orders <i class="fa fa-caret-down dim"></i></span>
+                    <ul>
+                        <li><a [routerLink]="['/openOrders']">My Open Orders</a></li>
+                        <li><a [routerLink]="['/tradeHistory']">My Trade History &amp; Analysis</a></li>
+                    </ul>
+                </li>
+                <li class="nav-right hideAlert" routerLinkActive="active">
+                <span class="title topLevel"><i class="fa fa-wrench"></i> <i class="fa fa-caret-down dim"></i><span
+                        class="notificationIcon error"></span></span>
+                    <ul>
+                        <li><a [routerLink]="['/2fa']">Two-Factor Authentication</a><span
+                                class="notificationIcon error"></span></li>
+                        <!--<li><a href="/apiKeys">API Keys</a></li>-->
+                        <li><a [routerLink]="['/feeTier']">Trading Tier Status</a></li>
+                        <li><a [routerLink]="['/loginHistory']">Login History</a></li>
+                        <li><a [routerLink]="['/changePassword']">Change Password</a></li>
+                        <li>
+                            <div class="info">Logged in as:<br><span
+                                    class="userName">{{settings.getUserSetting('email')}}</span></div>
+                            <a (click)="onLogout()">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-right hideAlert" routerLinkActive="active">
+                    <span class="title topLevel"><i class="fa fa-user"></i> <i class="fa fa-caret-down dim"></i></span>
+                    <ul>
+                        <li><a [routerLink]="['/profile']">My Profile</a></li>
+                        <!--<li><a href="/linkedAccounts">Linked Accounts</a></li>-->
+                    </ul>
+                </li>
+                <li class="icon themeSwitch hideAlert" (click)="switchMode('day')"
+                    *ngIf="settings.themeMode == 'night'">
+                    <a class="title"><span><i class="fa fa-sun-o"></i></span></a>
+                    <ul>
+                        <li>Switch to Day Mode</li>
+                    </ul>
+                </li>
+                <li class="icon themeSwitch hideAlert" (click)="switchMode('night')"
+                    *ngIf="settings.themeMode == 'day'">
+                    <a class="title"><span><i class="fa fa-moon-o"></i></span></a>
+                    <ul>
+                        <li>Switch to Night Mode</li>
+                    </ul>
+                </li>
+                <!--<li class="icon themeSwitch hideAlert">-->
+                <!--<a class="title" href="javascript:void(0)" onclick="$.get('/private.php', {command: 'changeDark', dark:1} ).done(function(data) {location.reload();});"><span><i class="fa fa-moon-o"></i></span></a>-->
+                <!--<ul>-->
+                <!--<li><i class="fa fa-caret-up"></i>Switch to Night Mode</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </div>
+
+        <div class="tabs right loggedOut" *ngIf="!settings.getAppSetting('is_loggedin')">
+            <ul>
+                <li class="message">
+                    <span class="title"><a class="sign-link" [routerLink]="['/login']">Sign in</a> or <a class="sign-link" [routerLink]="['/signup']">Create an Account</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

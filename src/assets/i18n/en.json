@@ -1,0 +1,53 @@
+{
+  "HOME": {
+    "TITLE": "Welcome To Coin Crypt.",
+    "SUBTITLE": "The Crypto world is spread across a massive web of sites and services. Coin Crypt simplifies the experience by pulling together key information and services into one location. Our School provides simple videos and instructions for the new user. Our Coin Profile and News area, is a goldmine of information which helps you keeps up to date with important milestones and news. The user friendly digital exchange allows you to trade mainstream Crypto currencies. You can even buy Mining services direct from our platform, as well as invest in ICO or a new Blockchain Project that are publicised on Coin Crypt",
+    "MAIN_SENTENCE_FIRST": "Trade Crypto, Mine or invest in ICOs and Blockchain Projects",
+    "MAIN_SENTENCE_SECOND": "Training, Coin Profiles, Latest News.",
+    "FOOTER1_TITLE": "Absolute focus on security.",
+    "FOOTER1_SUBTITLE": "Avoiding risk is a key tenet of our philosophy. The majority of your funds are stored offline in secure premise. Security should never sleep - our platform is monitored around the clock.",
+    "FOOTER2_TITLE": "Making your experience easier.",
+    "FOOTER2_SUBTITLE": "Our goal is to bring multiple services and information sources under one platform - so that you don't have to flip across numerous websites to research, trade, invest and mine.",
+    "FOOTER3_TITLE": "Maximum customer support",
+    "FOOTER3_SUBTITLE": "We strive to respond to all customer enquiries within 24 hours. At the risk of longer registration times, our preference is not to take on new customers if we cannot look after the existing ones."
+  },
+  "SIGNIN": {
+    "TITLE": "Log in to your account",
+    "SIGN_IN": "Log In",
+    "DONT_HAVE_ACCOUNT": "Not already a member?",
+    "DONT_HAVE_ACCOUNT_DESCRIPTION": "It's simple to get started!"
+  },
+  "SIGNUP": {
+    "TITLE": "Create your Account",
+    "WARNING_MESSAGE": "We aim to get you online ASAP! Due to the massive demand from new registrations, we cannot get through the process as fast as you and we would like. We will do our best so please have a little patience. Check your email for updates as to the status of your application.",
+    "SIGNUP_NOTICE": "After registering on Coin Crypt, please check your email to confirm the account. Please ensure you use a real email account, ideally with your name listed. Email addresses are researched for validity as part of the identity confirmation process - abstract / Throw away type email addresses unfortunately reduce your chances of joining Coin Crypt. Then simply complete the requested profile information and verify your identity. Once done, we can welcome to the Coin Crypt community.",
+    "RIGHT_SIDE1": "Your email address doubles as your Coin Crypt ID and method for communication with the Coin Crypt Support Team. ",
+    "RIGHT_SIDE2": "Your password must be a minimum 8 characters long. As you are talking about safe guarding your hard earned money, you are better selecting a difficult to guess, alphanumeric password of at least 20 characters.",
+    "RIGHT_SIDE3": "To improve your security, create a password that is dedicated to only Coin Crypt and never used anywhere else. A few seconds extra to memorise a tough to crack password is worth more than someone guessing it.",
+    "THANKS_FOR_CREATING1": "Thanks for creating your account!",
+    "THANKS_FOR_CREATING2": "Check your email to confirm your account.",
+    "THANKS_FOR_CREATING3": "If you don't find the mail in a few minutes, check your spam folder."
+  },
+  "FORGOT_PASSWORD": {
+    "TITLE": "Reset your Password",
+    "RIGHT_SIDE1": "Forgotten your password?",
+    "RIGHT_SIDE2": "No problem- let's reset it!.",
+    "RIGHT_SIDE3": "Your password must be a minimum 8 characters long. As you are talking about safe guarding your hard earned money, you are better selecting a difficult to guess, alphanumeric password of at least 20 characters.",
+    "RIGHT_SIDE4": "To improve your security, create a password that is dedicated to only Coin Crypt and never used anywhere else. A few seconds extra to memorise a tough to crack password is worth more than someone guessing it.",
+    "SUCCESSFUL_SEND": "An email with further instructions is its way to your inbox! If not received in the next 10 minutes, check your spam folder or contact the Coin Crypt support team."
+  },
+  "PROFILE": {
+    "TITLE": "Welcome To Coin Crypt",
+    "SUBTITLE": "To complete your registration, you'll first need to submit your profile for verification."
+  },
+  "BUTTON": {
+    "CREATE_ACCOUNT": "Create Your Account",
+    "SIGN_IN": "Sign in",
+    "SIGN_UP": "Register",
+    "SUBMIT": "Submit"
+  },
+  "LABEL": {
+    "ALREADY_MEMBER": "Already a member?",
+    "FORGOT_PASSWORD": "Forgot your password?"
+  }
+}
